@@ -154,7 +154,7 @@ class GE_WhatsApp_Button_Frontend {
         if (isset($this->options['position']) && $this->options['position'] === 'custom') {
             $bottom = isset($this->options['custom_bottom']) ? intval($this->options['custom_bottom']) : 20;
             $right = isset($this->options['custom_right']) ? intval($this->options['custom_right']) : 20;
-            return "bottom: {$bottom}px; right: {$right}px;";
+            return "bottom: {$bottom}px !important; right: {$right}px !important; left: auto !important; top: auto !important;";
         }
         return '';
     }

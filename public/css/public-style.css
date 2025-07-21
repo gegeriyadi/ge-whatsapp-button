@@ -22,7 +22,7 @@
 }
 
 .ge-wa-custom {
-    /* Custom positioning via inline styles */
+    /* Custom positioning handled by inline styles with !important */
 }
 
 /* Button Icon */
