@@ -85,7 +85,10 @@
             }
             
             const testMessage = 'Test message from GE WhatsApp Button plugin';
-            const testUrl = rotatorUrl + '?message=' + encodeURIComponent(testMessage);
+            let testUrl = rotatorUrl;
+            if (testMessage && testMessage.trim() !== '') {
+                testUrl += '?message=' + encodeURIComponent(testMessage);
+            }
             
             window.open(testUrl, '_blank');
         });

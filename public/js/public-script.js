@@ -22,7 +22,10 @@
         }
         
         // Build final URL
-        const finalUrl = rotatorUrl + '?message=' + encodeURIComponent(message);
+        let finalUrl = rotatorUrl;
+        if (message && message.trim() !== '') {
+            finalUrl += '?message=' + encodeURIComponent(message);
+        }
         
         // Optional Google Analytics tracking
         if (typeof gtag !== 'undefined') {
