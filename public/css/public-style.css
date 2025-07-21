@@ -8,6 +8,7 @@
     position: fixed;
     z-index: 9999;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 /* Position Classes */
@@ -184,6 +185,10 @@
     margin: 15px 0;
 }
 
+.ge-wa-widget * {
+    cursor: pointer;
+}
+
 .ge-wa-widget-btn {
     width: 100%;
     justify-content: center;
@@ -233,11 +238,28 @@
     color: #25d366;
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .ge-wa-custom-link:hover {
     color: #128c7e;
     text-decoration: underline;
+}
+
+/* Ensure all clickable elements have pointer cursor */
+.ge-whatsapp-float,
+.ge-wa-icon,
+.ge-wa-button,
+.ge-wa-widget-btn,
+.ge-wa-widget-icon,
+.ge-wa-custom-link {
+    cursor: pointer !important;
+}
+
+/* Also apply to any div or button with onclick */
+div[onclick],
+button[onclick] {
+    cursor: pointer !important;
 }
 
 /* Responsive Design */
