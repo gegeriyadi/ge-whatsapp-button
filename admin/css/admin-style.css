@@ -1,0 +1,279 @@
+/**
+ * Admin styles for GE WhatsApp Button
+ */
+
+.ge-link-generator {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.ge-link-generator h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: #1d2327;
+}
+
+.ge-link-generator .form-table {
+    margin-bottom: 20px;
+}
+
+#ge-generated-links {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#ge-generated-links h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #1d2327;
+}
+
+#ge-generated-links .widefat {
+    background: #fff;
+}
+
+#ge-generated-links code {
+    background: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    word-break: break-all;
+    display: block;
+    margin: 5px 0;
+    line-height: 1.4;
+    border: 1px solid #ddd;
+}
+
+.ge-copy-btn {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 2.15384615;
+    min-height: 30px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: top;
+}
+
+.ge-copy-btn:hover {
+    background: #135e96;
+    border-color: #135e96;
+    color: #fff;
+}
+
+.ge-copy-btn:active {
+    background: #135e96;
+    border-color: #135e96;
+    transform: translateY(1px);
+}
+
+/* Settings page styling */
+.ge-whatsapp-settings .form-table th {
+    width: 200px;
+}
+
+.ge-whatsapp-settings .form-table td {
+    padding-left: 20px;
+}
+
+.ge-whatsapp-settings .regular-text {
+    width: 400px;
+}
+
+.ge-whatsapp-settings textarea.regular-text {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Custom positioning fields */
+#custom_bottom,
+#custom_right {
+    width: 80px !important;
+}
+
+/* Section headers */
+.ge-settings-section {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 0;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.ge-settings-section h3 {
+    background: #f6f7f7;
+    border-bottom: 1px solid #c3c4c7;
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    color: #1d2327;
+}
+
+.ge-settings-section .inside {
+    padding: 20px;
+}
+
+/* Toggle switch styling */
+.ge-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.ge-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.ge-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+.ge-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .ge-toggle-slider {
+    background-color: #25d366;
+}
+
+input:checked + .ge-toggle-slider:before {
+    transform: translateX(26px);
+}
+
+/* Help text styling */
+.ge-help-text {
+    color: #646970;
+    font-style: italic;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Preview section */
+.ge-preview-section {
+    background: #f6f7f7;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.ge-preview-section h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.ge-preview-button {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.ge-preview-button img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ge-preview-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* Responsive admin styles */
+@media screen and (max-width: 782px) {
+    .ge-whatsapp-settings .form-table th,
+    .ge-whatsapp-settings .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .ge-whatsapp-settings .regular-text {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .ge-link-generator {
+        padding: 15px;
+    }
+    
+    #ge-generated-links code {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+}
+
+/* Dark mode support for WordPress admin */
+@media (prefers-color-scheme: dark) {
+    .ge-link-generator,
+    .ge-settings-section {
+        background: #1d2327;
+        border-color: #3c434a;
+    }
+    
+    .ge-settings-section h3 {
+        background: #2c3338;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+    
+    #ge-generated-links {
+        background: #2c3338;
+        border-color: #3c434a;
+    }
+    
+    #ge-generated-links code {
+        background: #1d2327;
+        border-color: #3c434a;
+        color: #f0f0f1;
+    }
+}

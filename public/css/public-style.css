@@ -1,0 +1,341 @@
+/**
+ * GE WhatsApp Button Styles
+ * All classes prefixed with 'ge-' to avoid conflicts
+ */
+
+/* Floating Button Styles */
+.ge-whatsapp-float {
+    position: fixed;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+/* Position Classes */
+.ge-wa-bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.ge-wa-bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+.ge-wa-custom {
+    /* Custom positioning via inline styles */
+}
+
+/* Button Icon */
+.ge-wa-icon {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ge-wa-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 100%);
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+.ge-wa-icon:hover::before {
+    opacity: 0.5;
+}
+
+.ge-wa-icon img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+}
+
+.ge-wa-icon:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.ge-wa-icon:hover img {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Size Classes */
+.ge-wa-small .ge-wa-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.ge-wa-small .ge-wa-icon img {
+    width: 28px;
+    height: 28px;
+}
+
+.ge-wa-medium .ge-wa-icon {
+    width: 65px;
+    height: 65px;
+}
+
+.ge-wa-medium .ge-wa-icon img {
+    width: 35px;
+    height: 35px;
+}
+
+.ge-wa-large .ge-wa-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.ge-wa-large .ge-wa-icon img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Animations */
+.ge-wa-animated .ge-wa-icon {
+    animation: ge-wa-bounce 2s infinite;
+}
+
+.ge-wa-animated .ge-wa-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #25d366;
+    border-radius: 50%;
+    animation: ge-wa-pulse 2s infinite;
+}
+
+@keyframes ge-wa-bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes ge-wa-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Inline Button Styles */
+.ge-wa-button {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(37, 211, 102, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.ge-wa-button:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.ge-wa-button:active {
+    transform: translateY(0);
+}
+
+/* Widget Styles */
+.ge-wa-widget {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.ge-wa-widget-btn {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ge-wa-widget-btn img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.ge-wa-widget-btn span {
+    font-size: 14px;
+}
+
+/* Size variants for widgets and inline buttons */
+.ge-wa-small.ge-wa-button {
+    padding: 8px 16px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.ge-wa-small.ge-wa-button img {
+    width: 16px;
+    height: 16px;
+}
+
+.ge-wa-large.ge-wa-button {
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+.ge-wa-large.ge-wa-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Custom Link Styles */
+.ge-wa-custom-link {
+    color: #25d366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ge-wa-custom-link:hover {
+    color: #128c7e;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ge-whatsapp-float {
+        transform: scale(0.9);
+    }
+    
+    .ge-wa-bottom-left,
+    .ge-wa-bottom-right {
+        bottom: 15px;
+    }
+    
+    .ge-wa-bottom-left {
+        left: 15px;
+    }
+    
+    .ge-wa-bottom-right {
+        right: 15px;
+    }
+    
+    .ge-wa-button {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ge-whatsapp-float {
+        transform: scale(0.8);
+    }
+    
+    .ge-wa-bottom-left,
+    .ge-wa-bottom-right {
+        bottom: 10px;
+    }
+    
+    .ge-wa-bottom-left {
+        left: 10px;
+    }
+    
+    .ge-wa-bottom-right {
+        right: 10px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .ge-wa-icon {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.6);
+    }
+    
+    .ge-wa-icon:hover {
+        box-shadow: 0 6px 25px rgba(37, 211, 102, 0.8);
+    }
+    
+    .ge-wa-button {
+        box-shadow: 0 2px 10px rgba(37, 211, 102, 0.4);
+    }
+    
+    .ge-wa-button:hover {
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.6);
+    }
+}
+
+/* Accessibility */
+.ge-wa-icon:focus,
+.ge-wa-button:focus {
+    outline: 2px solid #25d366;
+    outline-offset: 2px;
+}
+
+.ge-wa-icon:focus-visible,
+.ge-wa-button:focus-visible {
+    outline: 2px solid #25d366;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .ge-wa-icon,
+    .ge-wa-button {
+        border: 2px solid #000;
+    }
+    
+    .ge-wa-icon::after {
+        border-width: 3px;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .ge-wa-icon,
+    .ge-wa-button,
+    .ge-whatsapp-float {
+        transition: none;
+    }
+    
+    .ge-wa-animated .ge-wa-icon,
+    .ge-wa-animated .ge-wa-icon::after {
+        animation: none;
+    }
+}
+
+/* Print styles */
+@media print {
+    .ge-whatsapp-float {
+        display: none !important;
+    }
+}
