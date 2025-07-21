@@ -11,10 +11,9 @@
     window.geRedirectToWhatsApp = function(customMessage) {
         // Get values from localized script
         const rotatorUrl = ge_whatsapp_vars.rotator_url;
-        const defaultMessage = ge_whatsapp_vars.default_message;
         
-        // Use custom message or fall back to default
-        const message = customMessage || defaultMessage;
+        // Use custom message (no default fallback)
+        const message = customMessage || '';
         
         // Validate rotator URL
         if (!rotatorUrl) {
@@ -164,7 +163,6 @@
         if (typeof ge_whatsapp_debug !== 'undefined' && ge_whatsapp_debug) {
             console.log('GE WhatsApp Button Debug Info:', {
                 rotator_url: ge_whatsapp_vars.rotator_url,
-                default_message: ge_whatsapp_vars.default_message,
                 buttons_found: $('.ge-wa-icon, .ge-wa-button').length
             });
         }

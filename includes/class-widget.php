@@ -31,7 +31,7 @@ class GE_WhatsApp_Button_Widget extends WP_Widget {
         }
         
         $title = !empty($instance['title']) ? $instance['title'] : '';
-        $message = !empty($instance['message']) ? $instance['message'] : (isset($options['default_message']) ? $options['default_message'] : '');
+        $message = !empty($instance['message']) ? $instance['message'] : '';
         $button_text = !empty($instance['button_text']) ? $instance['button_text'] : __('Chat WhatsApp', 'ge-whatsapp-button');
         $size = !empty($instance['size']) ? $instance['size'] : 'medium';
         
@@ -79,7 +79,7 @@ class GE_WhatsApp_Button_Widget extends WP_Widget {
         <p>
             <label for="<?php echo $this->get_field_id('message'); ?>"><?php _e('Custom Message:', 'ge-whatsapp-button'); ?></label>
             <textarea class="widefat" id="<?php echo $this->get_field_id('message'); ?>" name="<?php echo $this->get_field_name('message'); ?>" rows="3"><?php echo esc_textarea($message); ?></textarea>
-            <small><?php _e('Leave empty to use default message from settings', 'ge-whatsapp-button'); ?></small>
+            <small><?php _e('Custom message for this widget instance', 'ge-whatsapp-button'); ?></small>
         </p>
         
         <p>

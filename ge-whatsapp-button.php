@@ -114,7 +114,7 @@ class GE_WhatsApp_Button {
         
         // Get values
         $rotator_url = !empty($atts['url']) ? $atts['url'] : (isset($options['rotator_url']) ? $options['rotator_url'] : '');
-        $message = !empty($atts['message']) ? $atts['message'] : (isset($options['default_message']) ? $options['default_message'] : '');
+        $message = $atts['message']; // Only use message from shortcode attribute
         $size_class = !empty($atts['size']) ? 'ge-wa-' . sanitize_html_class($atts['size']) : '';
         $style_class = 'ge-wa-' . sanitize_html_class($atts['style']);
         $custom_classes = !empty($atts['class']) ? ' ' . sanitize_html_class($atts['class']) : '';
@@ -159,7 +159,6 @@ class GE_WhatsApp_Button {
         $default_options = array(
             'enabled' => true,
             'rotator_url' => '',
-            'default_message' => __('Hello! I\'m interested in your services.', 'ge-whatsapp-button'),
             'position' => 'bottom-right',
             'custom_bottom' => 20,
             'custom_right' => 20,

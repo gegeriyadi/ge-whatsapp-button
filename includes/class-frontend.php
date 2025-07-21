@@ -53,8 +53,7 @@ class GE_WhatsApp_Button_Frontend {
         
         // Localize script
         wp_localize_script('ge-whatsapp-button', 'ge_whatsapp_vars', array(
-            'rotator_url' => isset($this->options['rotator_url']) ? $this->options['rotator_url'] : '',
-            'default_message' => isset($this->options['default_message']) ? $this->options['default_message'] : ''
+            'rotator_url' => isset($this->options['rotator_url']) ? $this->options['rotator_url'] : ''
         ));
     }
     
@@ -72,7 +71,7 @@ class GE_WhatsApp_Button_Frontend {
         $custom_style = $this->get_custom_position_style();
         
         $woocommerce_message = $this->get_woocommerce_message();
-        $message = !empty($woocommerce_message) ? $woocommerce_message : (isset($this->options['default_message']) ? $this->options['default_message'] : '');
+        $message = !empty($woocommerce_message) ? $woocommerce_message : '';
         
         echo sprintf(
             '<div class="ge-whatsapp-float %s %s %s" style="%s">
