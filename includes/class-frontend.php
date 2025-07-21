@@ -75,8 +75,8 @@ class GE_WhatsApp_Button_Frontend {
         
         echo sprintf(
             '<div class="ge-whatsapp-float %s %s %s" style="%s">
-                <a href="#" class="ge-wa-icon" onclick="geRedirectToWhatsApp(\'%s\'); return false;" title="%s" aria-label="%s">
-                </a>
+                <div class="ge-wa-icon" onclick="geRedirectToWhatsApp(\'%s\'); return false;" title="%s" aria-label="%s" role="button" tabindex="0">
+                </div>
             </div>',
             esc_attr($position_class),
             esc_attr($size_class),

@@ -83,6 +83,15 @@
             }
         });
         
+        // Remove default button behaviors for div elements with role="button"
+        $('.ge-wa-icon[role="button"]').on('keydown', function(e) {
+            // Prevent default button behaviors
+            if (e.keyCode === 13 || e.keyCode === 32) { // Enter or Space
+                e.preventDefault();
+                $(this).click();
+            }
+        });
+        
         // Add touch support for mobile devices
         if ('ontouchstart' in window) {
             $('.ge-wa-icon, .ge-wa-button').on('touchstart', function() {

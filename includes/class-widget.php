@@ -48,10 +48,10 @@ class GE_WhatsApp_Button_Widget extends WP_Widget {
         
         printf(
             '<div class="ge-wa-widget">
-                <a href="#" class="ge-wa-button ge-wa-widget-btn ge-wa-%s" onclick="%s">
+                <button class="ge-wa-button ge-wa-widget-btn ge-wa-%s" onclick="%s" type="button">
                     <span class="ge-wa-widget-icon"></span>
                     <span>%s</span>
-                </a>
+                </button>
             </div>',
             esc_attr($size),
             $onclick,

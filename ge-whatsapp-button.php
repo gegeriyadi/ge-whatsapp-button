@@ -130,7 +130,7 @@ class GE_WhatsApp_Button {
         
         if ($atts['style'] === 'inline') {
             return sprintf(
-                '<a href="#" class="ge-wa-button ge-wa-inline %s%s" onclick="%s">%s</a>',
+                '<button class="ge-wa-button ge-wa-inline %s%s" onclick="%s" type="button">%s</button>',
                 $size_class,
                 $custom_classes,
                 $onclick,
@@ -139,8 +139,8 @@ class GE_WhatsApp_Button {
         } else {
             return sprintf(
                 '<div class="ge-whatsapp-float %s%s">
-                    <a href="#" class="ge-wa-icon" onclick="%s" title="%s" aria-label="%s">
-                    </a>
+                    <div class="ge-wa-icon" onclick="%s" title="%s" aria-label="%s" role="button" tabindex="0">
+                    </div>
                 </div>',
                 $size_class,
                 $custom_classes,
